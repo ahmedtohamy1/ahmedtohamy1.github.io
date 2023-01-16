@@ -17,7 +17,7 @@
     </h1>
     <p>
         I <span>❤</span> Android, but also have great interest in
-        performant and efficient Software.
+        performant and efficient Technologies, Softwares and Tools.
     </p>
     <ul class="langs">
         {#each EXPERIENCE_LANGS as lang, i}
