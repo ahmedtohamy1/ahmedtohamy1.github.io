@@ -73,11 +73,10 @@ export const EXTERNAL_LICENSE_URL = "https://oss.kotw.dev/licenses/?id=";
 
 export const PROJECTS = [
 	{
-		title: "kotw.dev",
-		description: "This website is developed entirely opensource.",
+		title: "VoidUI",
+		description: "Minimal preformance efficient Custom rom entirely opensource.",
 		license: "mit",
-		repo: "KekOnTheWorld/kekontheworld.github.io",
-		demo: "https://kotw.dev"
+		repo: "VoidUI-Tiramisu/manifest",
 	},
 	{
 		title: "UnicodeExplorer",
