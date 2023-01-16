@@ -9,14 +9,14 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import type { License, Project } from "./types";
 
-export const EMAIL = "kekontheworld@gmail.com";
+export const EMAIL = "1ahmed.tohamy@gmail.com";
 
-export const DISCORD_URL = "https://discord.gg/Cq2UpzeTnm";
-export const GITHUB_URL = "https://github.com/KekOnTheWorld";
-export const GITLAB_URL = "https://gitlab.com/KekOnTheWorld";
-export const TWITTER_URL = "https://twitter.com/KekOnTheWorld";
-export const TWITCH_URL = "https://twitch.tv/KekOnTheWorld";
-export const YOUTUBE_URL = "https://www.youtube.com/channel/UCn-EuwrJNTYtkBS-r_XudjA";
+export const DISCORD_URL = "https://discordapp.com/users/1060279523511369729";
+export const GITHUB_URL = "https://github.com/ahmedtohamy1";
+export const GITLAB_URL = "https://gitlab.com/ahmedtohamy";
+export const TWITTER_URL = "https://twitter.com/_ahmedtohamy";
+export const TWITCH_URL = "https://en.wikipedia.org/wiki/HTTP_404";
+export const YOUTUBE_URL = "https://en.wikipedia.org/wiki/HTTP_404";
 
 export const EXPERIENCE_LANGS = [
 	{

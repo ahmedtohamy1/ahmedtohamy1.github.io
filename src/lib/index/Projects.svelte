@@ -27,7 +27,7 @@
 
 <svelte:head>
     {#if active}
-        <title>KekOnTheWorld | Projects</title>
+        <title>Ahmed Tohamy | Projects</title>
     {/if}
 </svelte:head>
 

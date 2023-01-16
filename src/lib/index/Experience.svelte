@@ -7,7 +7,7 @@
 
 <svelte:head>
     {#if active}
-        <title>KekOnTheWorld | Experience</title>
+        <title>Ahmed Tohamy | Experience</title>
     {/if}
 </svelte:head>
 

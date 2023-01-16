@@ -9,7 +9,7 @@
 
 <svelte:head>
     {#if active}
-        <title>KekOnTheWorld | Contact</title>
+        <title>Ahmed Tohamy | Contact</title>
     {/if}
 </svelte:head>
 
