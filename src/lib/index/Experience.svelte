@@ -16,7 +16,7 @@
         Experience
     </h1>
     <p>
-        I <span>❤</span> Webdevelopment, but also have great interesst in
+        I <span>❤</span> Android, but also have great interest in
         performant and efficient Software.
     </p>
     <ul class="langs">
