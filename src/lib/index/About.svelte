@@ -54,11 +54,11 @@
 
 <style lang="postcss">
     section {
-        @apply flex items-center justify-center flex-col gap-7 px-5 relative;
+        @apply flex items-center justify-center flex-col gap-7 px-50 relative;
     }
 
     section > h1 {
-        @apply sm:text-4xl text-3xl;
+        @apply sm:text-2xl text-2xl;
     }
 
     section > p {
