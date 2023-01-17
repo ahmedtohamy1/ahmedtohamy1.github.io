@@ -18,7 +18,7 @@
     <p>You can contact me at following providers. I will try to respond as fast as i can. I promise</p>
     <div class="links">
         <a href={TG_URL}>
-            <Fa icon={faTelegram}/> Discord
+            <Fa icon={faTelegram}/> Telegram
         </a>
         <a href="mailto:{EMAIL}">
             <Fa icon={faMailBulk}/> Email
