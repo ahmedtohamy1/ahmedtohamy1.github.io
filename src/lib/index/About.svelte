@@ -54,7 +54,7 @@
 
 <style lang="postcss">
     section {
-        @apply flex items-center justify-center flex-col gap-7 px-50 relative;
+        @apply flex items-center justify-center flex-col gap-7 px-10 relative;
     }
 
     section > h1 {
