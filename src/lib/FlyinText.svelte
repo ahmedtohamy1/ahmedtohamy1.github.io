@@ -4,7 +4,7 @@
     export let delay = 0;
     export let flyin = true;
 
-    $: letters = text.split("");
+    $: letters = text.split(" ");
 </script>
 
 {#each letters as l, i}
