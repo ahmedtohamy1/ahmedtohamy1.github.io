@@ -60,7 +60,7 @@
     .mobile {
         @apply sm:hidden flex fixed flex-col items-center z-20 top-0 left-0 
              h-screen px-6 w-full backdrop-blur-lg opacity-0
-             duration-300 pointer-events-none py-5;
+             duration-300 pointer-events-none py-20;
     }
     .mobile.menu {
         @apply pointer-events-auto opacity-100;
