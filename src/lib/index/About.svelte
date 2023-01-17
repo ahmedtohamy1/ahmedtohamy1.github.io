@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { DISCORD_URL, GITHUB_URL, GITLAB_URL, TWITCH_URL, TWITTER_URL, YOUTUBE_URL } from "$lib/config";
-    import { faDiscord, faGithub, faGitlab, faTwitch, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
+	import { DISCORD_URL, GITHUB_URL, GITLAB_URL, TWITCH_URL, TWITTER_URL, YOUTUBE_URL, FB_URL, IG_URL, TG_URL, LI_URL } from "$lib/config";
+    import { faDiscord, faGithub, faGitlab, faTwitch, faTwitter, faYoutube, faTelegram, faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
     
     import FlyinText from "$lib/FlyinText.svelte";
 	import Timesince from "$lib/Timesince.svelte";
@@ -37,11 +37,17 @@
         <a href={TWITTER_URL} target="_blank" rel="noreferrer" aria-label="Twitter">
             <Fa icon={faTwitter}/>
         </a>
-        <a href={TWITCH_URL} target="_blank" rel="noreferrer" aria-label="Twitch">
-            <Fa icon={faTwitch}/>
+        <a href={TG_URL} target="_blank" rel="noreferrer" aria-label="Telegram">
+            <Fa icon={faTelegram}/>
         </a>
-        <a href={YOUTUBE_URL} target="_blank" rel="noreferrer" aria-label="Youtube">
-            <Fa icon={faYoutube}/>
+        <a href={FB_URL} target="_blank" rel="noreferrer" aria-label="Facebook">
+            <Fa icon={faFacebook}/>
+        </a>
+        <a href={LI_URL} target="_blank" rel="noreferrer" aria-label="linkedin">
+            <Fa icon={faLinkedin}/>
+        </a>
+        <a href={IG_URL} target="_blank" rel="noreferrer" aria-label="Instagram">
+            <Fa icon={faInstagram}/>
         </a>
     </div>
 </section>
@@ -90,4 +96,6 @@
     section.active .socials a:nth-child(4) { @apply delay-[1000ms] }
     section.active .socials a:nth-child(5) { @apply delay-[1050ms] }
     section.active .socials a:nth-child(6) { @apply delay-[1100ms] }
+    section.active .socials a:nth-child(7) { @apply delay-[1150ms] }
+    section.active .socials a:nth-child(8) { @apply delay-[1200ms] }
 </style>

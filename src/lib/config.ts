@@ -19,6 +19,10 @@ export const GITLAB_URL = "https://gitlab.com/ahmedtohamy";
 export const TWITTER_URL = "https://twitter.com/_ahmedtohamy";
 export const TWITCH_URL = "https://en.wikipedia.org/wiki/HTTP_404";
 export const YOUTUBE_URL = "https://en.wikipedia.org/wiki/HTTP_404";
+export const FB_URL = "https://www.facebook.com/ahmed.tohamy.0";
+export const IG_URL = "https://www.instagram.com/ahmed.tuhamy";
+export const TG_URL = "https://www.t.me/ahmed_tohamy";
+export const LI_URL = "https://www.linkedin.com/in/ahmedtohamy";
 
 export const EXPERIENCE_LANGS = [
 	{
