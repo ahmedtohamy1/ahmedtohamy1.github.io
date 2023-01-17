@@ -24,6 +24,12 @@
             <Fa icon={faMailBulk}/> Email
         </a>
     </div>
+<p>  
+ 
+ 
+
+	
+</p>
 </section>
 
 <style lang="postcss">
