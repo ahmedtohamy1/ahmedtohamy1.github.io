@@ -25,7 +25,7 @@
 <svelte:window bind:innerHeight></svelte:window>
 
 <svelte:head>
-    <title>KekOnTheWorld</title>
+    <title>Ahmed Tohamy</title>
 </svelte:head>
 
 {#each sections as section}<div id={section}/>{/each}

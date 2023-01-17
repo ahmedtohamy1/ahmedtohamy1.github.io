@@ -16,7 +16,7 @@
 </script>
 
 <svelte:head>
-    <title>KekOnTheWorld | Not found</title>
+    <title>Ahmed Tohamy | Not found</title>
 </svelte:head>
 
 <main class:active>
