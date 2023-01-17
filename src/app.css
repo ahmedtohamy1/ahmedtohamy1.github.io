@@ -34,11 +34,11 @@ body::-webkit-scrollbar {
 	h2,
 	h3,
 	h4 {
-		@apply text-black dark:text-white font-bold;
+		@apply text-black dark:text-white;
 	}
 
 	h1 {
-		@apply text-2xl;
+		@apply text-5xl;
 	}
 
 	h2 {
