@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { DISCORD_URL, EMAIL } from "$lib/config";
-	import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+	import { TG_URL, EMAIL } from "$lib/config";
+	import { faTelegram } from "@fortawesome/free-brands-svg-icons";
 	import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 	import Fa from "svelte-fa";
 
@@ -17,8 +17,8 @@
     <h1>Contact</h1>
     <p>You can contact me at following providers. I will try to respond as fast as i can. I promise</p>
     <div class="links">
-        <a href={DISCORD_URL}>
-            <Fa icon={faDiscord}/> Discord
+        <a href={TG_URL}>
+            <Fa icon={faTelegram}/> Discord
         </a>
         <a href="mailto:{EMAIL}">
             <Fa icon={faMailBulk}/> Email
