@@ -49,7 +49,7 @@
 
 <style lang="postcss">
     section {
-        @apply flex items-center justify-center flex-col gap-7 px-5;
+        @apply flex items-center justify-center flex-col gap-7 px-10;
     }
 
     section > h1, section > p {
@@ -57,7 +57,7 @@
     }
 
     section > h1 {
-        @apply sm:text-4xl text-3xl translate-x-20;
+        @apply sm:text-3xl text-3xl translate-x-20;
     }
 
     section > p {
