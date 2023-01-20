@@ -3,7 +3,7 @@
 
     import Footer from "$lib/Footer.svelte";
     import About from "$lib/index/About.svelte";
-    import Contact from "$lib/index/Contact.svelte";
+    import Highlights from "$lib/index/Highlights.svelte";
     import Experience from "$lib/index/Experience.svelte";
     import Projects from "$lib/index/Projects.svelte";
     import Navbar from "$lib/Navbar.svelte";
@@ -14,7 +14,7 @@
 
     const sections = [
         "about", "experience",
-        "projects", "contact"
+        "projects", "highlights"
     ];
 
     let innerHeight: number;
@@ -37,7 +37,7 @@
             <About active={mount && active[0]}/>
             <Experience active={mount && active[1]}/>
             <Projects active={mount && active[2]}/>
-            <Contact active={mount && active[3]}/>
+            <Highlights active={mount && active[3]}/>
         </SnapScroll>
     </main>
     <Footer/>

@@ -19,7 +19,7 @@
         ["/#about", "About"],
         ["/#experience", "Experience"],
         ["/#projects", "Projects"],
-        ["/#contact", "Contact"],
+        ["/#highlights", "Highlights"],
     ];
 </script>
 
