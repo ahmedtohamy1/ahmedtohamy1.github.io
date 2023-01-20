@@ -36,8 +36,8 @@
         Projects
     </h1>
     <p>
-        Here you can find a list of things i am working on and have worked on in the past
-	(NOT COMPLETE LIST TOO LAZY TO FILL IT)
+        Here you can find a list of things i am working on and have worked on in the past<br>
+	(NOT COMPLETE LIST TOO LAZY TO FILL IT)<br>
     </p>
 
     <div class="projects">
