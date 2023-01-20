@@ -53,6 +53,7 @@ ol {
 	list-style-type: none;
 	counter-reset: li;
 }
+
 li {
 	font-size: 1.1rem;
 }
@@ -70,7 +71,7 @@ li {
     }
 
     .links ol {
-        @apply flex items-center gap-x-2 font-inter tracking-wider justify-center flex-col
+        @apply flex items-center gap-x-2 font-inter tracking-wider justify-center flex-col flex-wrap justify-around m-8
             border-white dark:border-black/20 border-[1px] rounded-lg px-3 py-1.5 
             bg-white/30 dark:bg-black/30
             transition-[transform,opacity] opacity-0 
