@@ -17,17 +17,23 @@
     <h1>Highlights</h1>
     <p>
     Some of my previous experinces including titles and time periods passed in it: <br>
-        <li>app</li>
-        <li>oranges</li>
-        <li>bananas</li>
     </p>
 
     <div class="links">
-	<ul>
-	<li>app</li>
-	<li>oranges</li>
-	<li>bananas</li>
-	</ul>
+	<ol>
+	<li>one</li>
+	<li>two</li>
+	<li>three</li>
+	<li>four</li>
+	<li>five</li>
+	<li>six</li>
+	<li>seven</li>
+	<li>eight</li>
+	<li>nine</li>
+	<li>ten</li>
+	<li>eleven</li>
+	<li>twelve</li>
+	</ol>
     </div>
 <p>  
  
@@ -50,6 +56,21 @@
         @apply sm:text-4xl text-3xl translate-x-20;
     }
 
+ol {
+	list-style-type: none;
+	counter-reset: li;
+}
+li {
+	font-size: 2rem;
+}
+
+li:before {
+  counter-increment: li;
+  content: counter(li, decimal-leading-zero);
+	color: red;
+	margin-right: 0.3em;
+}
+
     section > p {
         @apply font-inter max-w-md sm:text-lg text-base -translate-x-20;
     }
@@ -62,7 +83,7 @@
         @apply flex gap-x-2 flex-wrap;
     }
 
-    .links ul {
+    .links ol {
         @apply flex items-center gap-x-2 font-inter tracking-wider justify-center flex-col
             border-white dark:border-black/20 border-[1px] rounded-lg px-3 py-1.5 
             bg-white/30 dark:bg-black/30
@@ -70,7 +91,7 @@
             transform-gpu translate-y-10;
     }
 
-    section.active .links ul {
+    section.active .links ol {
         @apply duration-1000 opacity-100 translate-y-0;
     }
 
