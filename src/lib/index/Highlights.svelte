@@ -9,13 +9,22 @@
 
 <svelte:head>
     {#if active}
-        <title>Ahmed Tohamy | Contact</title>
+        <title>Ahmed Tohamy | Highlights</title>
     {/if}
 </svelte:head>
 
 <section class="full" class:active>
-    <h1>Contact</h1>
-    <p>You can contact me at following providers. I will try to respond as fast as i can. I promise</p>
+    <h1>Highlights</h1>
+    <p>
+    You can contact me at following providers. I will try to respond as fast as i can. I promise
+    </p>
+
+<ul>
+<li>app</li>
+<li>oranges</li>
+<li>bananas</li>
+</ul>
+
     <div class="links">
         <a href={TG_URL}>
             <Fa icon={faTelegram}/> Telegram
