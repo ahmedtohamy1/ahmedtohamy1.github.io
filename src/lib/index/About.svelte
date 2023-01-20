@@ -1,3 +1,4 @@
+
 <script lang="ts">
 	import { DISCORD_URL, GITHUB_URL, GITLAB_URL, TWITCH_URL, TWITTER_URL, YOUTUBE_URL, FB_URL, IG_URL, TG_URL, LI_URL } from "$lib/config";
     import { faDiscord, faGithub, faGitlab, faTwitch, faTwitter, faYoutube, faTelegram, faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -23,6 +24,7 @@
     <p>
         A Computer Engineering  student, A developer who loves Android And Opensource Softwares/Techs enthusiast.
         has been coding for <Timesince time={new Date("2017-12-27 13:34")}/> and is heavily <a href="#experience">experienced</a> in Android development.
+	You can contact me using any of below links.
     </p>
     <div class="socials">
         <a href={DISCORD_URL} target="_blank" rel="noreferrer" aria-label="Discord">
