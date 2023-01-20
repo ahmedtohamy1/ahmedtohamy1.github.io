@@ -22,9 +22,10 @@
         <FlyinText text="Ahmed Tohamy" flyin={active} delay={300}/>
     </h1>
     <p>
-        A Computer Engineering  student, A developer who loves Android And Opensource Softwares/Techs enthusiast.
-        has been coding for <Timesince time={new Date("2017-12-27 13:34")}/> and is heavily <a href="#experience">experienced</a> in Android development.
-	You can contact me at following providers. I will try to respond as fast as I can. I promise
+        A Computer Engineering  student, A developer who loves Android And Opensource Softwares/Techs enthusiast.<br>
+        has been coding for <Timesince time={new Date("2017-12-27 13:34")}/> and heavily <a href="#experience">experienced</a> in Android development. <br>
+	You can contact me at following providers. <br>
+	I will try to respond as fast as I can. I promise <br>
     </p>
     <div class="socials">
         <a href={DISCORD_URL} target="_blank" rel="noreferrer" aria-label="Discord">

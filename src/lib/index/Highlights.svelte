@@ -19,12 +19,6 @@
     You can contact me at following providers. I will try to respond as fast as i can. I promise
     </p>
 
-<ul>
-<li>app</li>
-<li>oranges</li>
-<li>bananas</li>
-</ul>
-
     <div class="links">
 	<ul>
 	<li>app</li>
@@ -66,7 +60,7 @@
     }
 
     .links ul {
-        @apply flex items-center gap-x-2 font-inter tracking-wider font-semibold
+        @apply flex items-center gap-x-2 font-inter tracking-wider 
             border-white dark:border-black/20 border-[1px] rounded-lg px-3 py-1.5 
             bg-white/30 dark:bg-black/30
             transition-[transform,opacity] opacity-0 
