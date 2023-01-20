@@ -37,6 +37,7 @@
     </h1>
     <p>
         Here you can find a list of things i am working on and have worked on in the past
+	(NOT COMPLETE LIST TOO LAZY TO FILL IT)
     </p>
 
     <div class="projects">

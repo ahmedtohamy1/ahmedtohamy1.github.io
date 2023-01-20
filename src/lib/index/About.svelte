@@ -21,8 +21,8 @@
         <FlyinText text="Ahmed Tohamy" flyin={active} delay={300}/>
     </h1>
     <p>
-        Ahmed Tohamy is a student and developer who loves Android & Opensource Software.
-        He has been coding for <Timesince time={new Date("2017-12-27 13:34")}/> and is heavily <a href="#experience">experienced</a> in Android development.
+        A Computer Engineering  student, A developer who loves Android And Opensource Softwares/Techs enthusiast.
+        has been coding for <Timesince time={new Date("2017-12-27 13:34")}/> and is heavily <a href="#experience">experienced</a> in Android development.
     </p>
     <div class="socials">
         <a href={DISCORD_URL} target="_blank" rel="noreferrer" aria-label="Discord">
