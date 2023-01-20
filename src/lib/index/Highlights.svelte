@@ -44,7 +44,7 @@
         @apply duration-1000 font-inter flex items-center justify-center flex-col 
             border-white dark:border-black/20
             bg-white/30 dark:bg-black/30
-            transition-[transform,opacity] 
+            transition-[transform,opacity] opacity-0
             transform-gpu translate-y-10;
     }
 
