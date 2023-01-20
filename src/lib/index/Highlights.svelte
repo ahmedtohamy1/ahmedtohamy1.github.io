@@ -42,8 +42,8 @@
 
     section.active > ul {
         @apply duration-1000 font-inter flex items-center justify-center flex-col 
-            border-white dark:border-black/20
-            bg-white/30 dark:bg-black/30
+            border-white dark:border-white border-[1px] rounded-lg px-3 py-1.5
+            bg-transparent dark:bg-transparent
             transition-[transform,opacity] opacity-0
             transform-gpu translate-y-10;
     }
