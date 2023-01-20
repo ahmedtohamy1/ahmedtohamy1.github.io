@@ -16,19 +16,19 @@
 <section class="full" class:active>
     <h1>Highlights</h1>
 
-    <p>
-        <li>Social Media Team at Xiaomi Egypt - 2019</li>
-        <li>Mi Home at Xiaomi Egypt - 2022 till now</li>
-        <li>Co-Founder & Core Developer at VoidUI Project - 2022 till now</li>
-        <li>Evolution X Project Maintainers Team - 2018 till now</li>
-        <li>PixelPlusUI Project Maintainers Team - 2021</li>
-        <li>Media Buyer & Marketer at Facebook - 2020</li>
-        <li>Campaign Manager at EDMark MENA - 2022 till now</li>
-        <li>Data Science Team Leader at GDSC BU - 2021</li>
-        <li>Social Media & Branding Team Leader at IEEE BUSB - 2021</li>
-        <li>Social Media & Branding Team at Enactus SFE - 2021</li>
-        <li>Social Media & Branding Team at Mikyal SFE - 2021</li>
-    </p>
+<ul style="list-style-type:none;">
+        <li>- Social Media Team at Xiaomi Egypt - 2019</li>
+        <li>- Mi Home at Xiaomi Egypt - 2022 till now</li>
+        <li>- Co-Founder & Core Developer at VoidUI Project - 2022 till now</li>
+        <li>- Evolution X Project Maintainers Team - 2018 till now</li>
+        <li>- PixelPlusUI Project Maintainers Team - 2021</li>
+        <li>- Media Buyer & Marketer at Facebook - 2020</li>
+        <li>- Campaign Manager at EDMark MENA - 2022 till now</li>
+        <li>- Data Science Team Leader at GDSC BU - 2021</li>
+        <li>- Social Media & Branding Team Leader at IEEE BUSB - 2021</li>
+        <li>- Social Media & Branding Team at Enactus SFE - 2021</li>
+        <li>- Social Media & Branding Team at Mikyal SFE - 2021</li>
+    </ul>
 </section>
 
 <style lang="postcss">
@@ -40,11 +40,12 @@
         @apply sm:text-4xl text-3xl translate-x-20;
     }
 
-    section.active > p {
-        @apply delay-500 duration-1000 opacity-100 translate-y-0 scale-100;
+    section.active > ul {
+        @apply delay-500 duration-1000 opacity-100 font-inter flex items-center justify-center flex-col 
+	       translate-y-0 scale-100;
     }
 
-    section.active > h1, section.active > p {
+    section.active > h1, section.active > ul {
         @apply delay-300 duration-1000 translate-x-0 opacity-100;
     }
 

@@ -38,7 +38,7 @@ body::-webkit-scrollbar {
 	}
 
 	h1 {
-		@apply text-5xl;
+		@apply text-2xl;
 	}
 
 	h2 {
@@ -52,6 +52,10 @@ body::-webkit-scrollbar {
 	p {
 		@apply text-gray-800 dark:text-white/90;
 	}
+
+        ul {
+                @apply text-lg text-gray-800 dark:text-white/90;
+        }
 
 	.full {
 		@apply pt-16 min-h-screen;
