@@ -63,7 +63,7 @@
     }
 
     .links ul {
-        @apply flex items-center gap-x-2 font-inter tracking-wider 
+        @apply flex items-center gap-x-2 font-inter tracking-wider justify-center flex-col
             border-white dark:border-black/20 border-[1px] rounded-lg px-3 py-1.5 
             bg-white/30 dark:bg-black/30
             transition-[transform,opacity] opacity-0 
