@@ -16,7 +16,10 @@
 <section class="full" class:active>
     <h1>Highlights</h1>
     <p>
-    You can contact me at following providers. I will try to respond as fast as i can. I promise
+    Some of my previous experinces including titles and time periods passed in it: <br>
+        <li>app</li>
+        <li>oranges</li>
+        <li>bananas</li>
     </p>
 
     <div class="links">
