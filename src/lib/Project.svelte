@@ -42,7 +42,7 @@
 
 <style lang="postcss">
     main .project {
-        @apply w-screen max-w-md py-6 px-8 border-[2px] rounded-lg text-left
+        @apply py-6 px-8 border-[1px] rounded-lg text-left
             border-white dark:border-black/20
             bg-white/30 dark:bg-black/30;
             /* bg-white/20 dark:bg-gray-900 border-black/5
