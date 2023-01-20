@@ -61,14 +61,7 @@ ol {
 	counter-reset: li;
 }
 li {
-	font-size: 2rem;
-}
-
-li:before {
-  counter-increment: li;
-  content: counter(li, decimal-leading-zero);
-	color: red;
-	margin-right: 0.3em;
+	font-size: 1.5rem;
 }
 
     section > p {
