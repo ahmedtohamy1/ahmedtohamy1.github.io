@@ -16,7 +16,7 @@
 <section class="full" class:active>
     <h1>Highlights</h1>
 
-        <ol>
+    <p>
         <li>Social Media Team at Xiaomi Egypt - 2019</li>
         <li>Mi Home at Xiaomi Egypt - 2022 till now</li>
         <li>Co-Founder & Core Developer at VoidUI Project - 2022 till now</li>
@@ -28,8 +28,7 @@
         <li>Social Media & Branding Team Leader at IEEE BUSB - 2021</li>
         <li>Social Media & Branding Team at Enactus SFE - 2021</li>
         <li>Social Media & Branding Team at Mikyal SFE - 2021</li>
-        </ol>
-
+    </p>
 </section>
 
 <style lang="postcss">
@@ -37,25 +36,12 @@
         @apply flex items-center justify-center flex-col gap-7 px-10;
     }
 
-    section > h1, section > p {
-        @apply transition-[transform,opacity] transform-gpu opacity-0;
-    }
-
     section > h1 {
         @apply sm:text-4xl text-3xl translate-x-20;
     }
 
-ol {
-	list-style-type: none;
-	counter-reset: li;
-}
-
-li {
-	font-size: 1.1rem;
-}
-
-    section > p {
-        @apply font-inter max-w-md sm:text-lg text-base -translate-x-20;
+    section.active > p {
+        @apply delay-500 duration-1000 opacity-100 translate-y-0 scale-100;
     }
 
     section.active > h1, section.active > p {
