@@ -26,12 +26,11 @@
 </ul>
 
     <div class="links">
-        <a href={TG_URL}>
-            <Fa icon={faTelegram}/> Telegram
-        </a>
-        <a href="mailto:{EMAIL}">
-            <Fa icon={faMailBulk}/> Email
-        </a>
+	<ul>
+	<li>app</li>
+	<li>oranges</li>
+	<li>bananas</li>
+	</ul>
     </div>
 <p>  
  
@@ -66,7 +65,7 @@
         @apply flex gap-x-2 flex-wrap;
     }
 
-    .links a {
+    .links ul {
         @apply flex items-center gap-x-2 font-inter tracking-wider font-semibold
             border-white dark:border-black/20 border-[1px] rounded-lg px-3 py-1.5 
             bg-white/30 dark:bg-black/30
@@ -74,7 +73,7 @@
             transform-gpu translate-y-10;
     }
 
-    section.active .links a {
+    section.active .links ul {
         @apply duration-1000 opacity-100 translate-y-0;
     }
 
