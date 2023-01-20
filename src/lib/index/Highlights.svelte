@@ -21,26 +21,19 @@
 
     <div class="links">
 	<ol>
-	<li>one</li>
-	<li>two</li>
-	<li>three</li>
-	<li>four</li>
-	<li>five</li>
-	<li>six</li>
-	<li>seven</li>
-	<li>eight</li>
-	<li>nine</li>
-	<li>ten</li>
-	<li>eleven</li>
-	<li>twelve</li>
+        <li>Social Media Team at Xiaomi Egypt - 2019</li>
+        <li>Mi Home at Xiaomi Egypt - 2022 till now</li>
+        <li>Co-Founder & Core Developer at VoidUI Project - 2022 till now</li>
+	<li>Evolution X Project Maintainers Team - 2018 till now</li>
+        <li>PixelPlusUI Project Maintainers Team - 2021</li>
+        <li>Media Buyer & Marketer at Facebook - 2020</li>
+        <li>Campaign Manager at EDMark MENA - 2022 till now</li>
+	<li>Data Science Team Leader at GDSC BU - 2021</li>
+	<li>Social Media & Branding Team Leader at IEEE BUSB - 2021</li>
+	<li>Social Media & Branding Team at Enactus SFE - 2021</li>
+        <li>Social Media & Branding Team at Mikyal SFE - 2021</li>
 	</ol>
     </div>
-<p>  
- 
- 
-
-	
-</p>
 </section>
 
 <style lang="postcss">
