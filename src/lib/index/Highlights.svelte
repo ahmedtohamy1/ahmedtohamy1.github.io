@@ -38,7 +38,7 @@
 
 <style lang="postcss">
     section {
-        @apply flex items-center justify-center flex-col gap-10 px-10;
+        @apply flex items-center justify-center flex-col gap-7 px-10;
     }
 
     section > h1, section > p {
@@ -54,7 +54,7 @@ ol {
 	counter-reset: li;
 }
 li {
-	font-size: 1.5rem;
+	font-size: 1.1rem;
 }
 
     section > p {
