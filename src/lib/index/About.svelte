@@ -24,7 +24,7 @@
     <p>
         A Computer Engineering  student, A developer who loves Android And Opensource Softwares/Techs enthusiast.
         has been coding for <Timesince time={new Date("2017-12-27 13:34")}/> and is heavily <a href="#experience">experienced</a> in Android development.
-	You can contact me using any of below links.
+	You can contact me at following providers. I will try to respond as fast as I can. I promise
     </p>
     <div class="socials">
         <a href={DISCORD_URL} target="_blank" rel="noreferrer" aria-label="Discord">
