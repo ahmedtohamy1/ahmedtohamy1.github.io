@@ -42,7 +42,10 @@
 
     section.active > ul {
         @apply delay-500 duration-1000 opacity-100 font-inter flex items-center justify-center flex-col 
-	       translate-y-0 scale-100;
+            border-white dark:border-black/20 border-[1px] rounded-lg px-3 py-1.5
+            bg-white/30 dark:bg-black/30
+            transition-[transform,opacity] opacity-0
+            transform-gpu translate-y-10;
     }
 
     section.active > h1, section.active > ul {
