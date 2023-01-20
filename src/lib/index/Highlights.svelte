@@ -15,25 +15,21 @@
 
 <section class="full" class:active>
     <h1>Highlights</h1>
-    <p>
-    Some of my previous experinces including titles and time periods passed in it: <br>
-    </p>
 
-    <div class="links">
-	<ol>
+        <ol>
         <li>Social Media Team at Xiaomi Egypt - 2019</li>
         <li>Mi Home at Xiaomi Egypt - 2022 till now</li>
         <li>Co-Founder & Core Developer at VoidUI Project - 2022 till now</li>
-	<li>Evolution X Project Maintainers Team - 2018 till now</li>
+        <li>Evolution X Project Maintainers Team - 2018 till now</li>
         <li>PixelPlusUI Project Maintainers Team - 2021</li>
         <li>Media Buyer & Marketer at Facebook - 2020</li>
         <li>Campaign Manager at EDMark MENA - 2022 till now</li>
-	<li>Data Science Team Leader at GDSC BU - 2021</li>
-	<li>Social Media & Branding Team Leader at IEEE BUSB - 2021</li>
-	<li>Social Media & Branding Team at Enactus SFE - 2021</li>
+        <li>Data Science Team Leader at GDSC BU - 2021</li>
+        <li>Social Media & Branding Team Leader at IEEE BUSB - 2021</li>
+        <li>Social Media & Branding Team at Enactus SFE - 2021</li>
         <li>Social Media & Branding Team at Mikyal SFE - 2021</li>
-	</ol>
-    </div>
+        </ol>
+
 </section>
 
 <style lang="postcss">
