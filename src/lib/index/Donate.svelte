@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { DISCORD_URL, GITHUB_URL, GITLAB_URL, TWITCH_URL, TWITTER_URL, YOUTUBE_URL, FB_URL, IG_URL, TG_URL, LI_URL } from "$lib/config";
-    import { faDiscord, faGithub, faGitlab, faTwitch, faTwitter, faYoutube, faTelegram, faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+	import { DISCORD_URL, GITHUB_URL, GITLAB_URL, TWITCH_URL, TWITTER_URL, YOUTUBE_URL, FB_URL, IG_URL, TG_URL, LI_URL, PAYPAL_URL, PATREON_URL } from "$lib/config";
+    import { faDiscord, faGithub, faGitlab, faTwitch, faTwitter, faYoutube, faTelegram, faFacebook, faInstagram, faLinkedin, faPaypal, faPatreon, faViacoin } from "@fortawesome/free-brands-svg-icons";
     
     import FlyinText from "$lib/FlyinText.svelte";
 	import Timesince from "$lib/Timesince.svelte";
@@ -10,43 +10,26 @@
 
 <svelte:head>
     {#if active}
-        <title>Ahmed Tohamy | About</title>
+        <title>Ahmed Tohamy | Donate</title>
     {/if}
 </svelte:head>
 
 <section class:active class="full">
     <h1>
-        <FlyinText text="Ahmed Tohamy" flyin={active} delay={300}/>
+        <FlyinText text="Donations" flyin={active} delay={300}/>
     </h1>
     <p>
-        A Computer Engineering  student, A developer who loves Android And Opensource Softwares/Techs enthusiast.
-        has been coding for <Timesince time={new Date("2017-12-27 13:34")}/> and is heavily <a href="#experience">experienced</a> in Android development.
-	You can contact me at following providers. I will try to respond as fast as I can. I promise
+	As a development professional, receiving a donation to help me with my work not only motivates me to work better, but also encourages me to put more effort into making things even better. With added support from donations, I can make sure that my efforts are worthwhile and can be seen in the success of the stuff I'm doing. It's invigorating for me to know that others believe in my skills and appreciate what I can achieve when I'm given extra support. From someone donating stationery supplies so that I have all the materials needed for coding and research, to someone investing in my talent and helping out with tuition costs - every donation helps lead towards an exciting future.
     </p>
     <div class="socials">
-        <a href={DISCORD_URL} target="_blank" rel="noreferrer" aria-label="Discord">
-            <Fa icon={faDiscord}/>
+        <a href={PAYPAL_URL} target="_blank" rel="noreferrer" aria-label="Paypal">
+            <Fa icon={faPaypal}/>
         </a>
-        <a href={GITHUB_URL} target="_blank" rel="noreferrer" aria-label="Github">
-            <Fa icon={faGithub}/>
+        <a href={PATREON_URL} target="_blank" rel="noreferrer" aria-label="Github">
+            <Fa icon={faPatreon}/>
         </a>
-        <a href={GITLAB_URL} target="_blank" rel="noreferrer" aria-label="Gitlab">
-            <Fa icon={faGitlab}/>
-        </a>
-        <a href={TWITTER_URL} target="_blank" rel="noreferrer" aria-label="Twitter">
-            <Fa icon={faTwitter}/>
-        </a>
-        <a href={TG_URL} target="_blank" rel="noreferrer" aria-label="Telegram">
-            <Fa icon={faTelegram}/>
-        </a>
-        <a href={FB_URL} target="_blank" rel="noreferrer" aria-label="Facebook">
-            <Fa icon={faFacebook}/>
-        </a>
-        <a href={LI_URL} target="_blank" rel="noreferrer" aria-label="linkedin">
-            <Fa icon={faLinkedin}/>
-        </a>
-        <a href={IG_URL} target="_blank" rel="noreferrer" aria-label="Instagram">
-            <Fa icon={faInstagram}/>
+        <a href="tel:5554280940" target="_blank" rel="noreferrer" aria-label="Wallet">
+            <Fa icon={faViacoin}/>
         </a>
     </div>
 </section>
@@ -85,9 +68,4 @@
     section.active .socials a:nth-child(1) { @apply delay-[850ms] }
     section.active .socials a:nth-child(2) { @apply delay-[900ms] }
     section.active .socials a:nth-child(3) { @apply delay-[950ms] }
-    section.active .socials a:nth-child(4) { @apply delay-[1000ms] }
-    section.active .socials a:nth-child(5) { @apply delay-[1050ms] }
-    section.active .socials a:nth-child(6) { @apply delay-[1100ms] }
-    section.active .socials a:nth-child(7) { @apply delay-[1150ms] }
-    section.active .socials a:nth-child(8) { @apply delay-[1200ms] }
 </style>

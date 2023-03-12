@@ -23,6 +23,10 @@ export const FB_URL = "https://www.facebook.com/ahmed.tohamy.0";
 export const IG_URL = "https://www.instagram.com/ahmed.tuhamy";
 export const TG_URL = "https://www.t.me/ahmed_tohamy";
 export const LI_URL = "https://www.linkedin.com/in/ahmedtohamy";
+export const PAYPAL_URL = "https://www.paypal.com/paypalme/ahmedtohamy1";
+export const PATREON_URL = "https://www.patreon.com/Ahmedtohamy";
+
+
 
 export const EXPERIENCE_LANGS = [
 	{
