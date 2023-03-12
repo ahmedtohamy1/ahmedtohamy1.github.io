@@ -28,7 +28,7 @@
         <a href={PATREON_URL} target="_blank" rel="noreferrer" aria-label="Github">
             <Fa icon={faPatreon}/>
         </a>
-        <a href="tel:5554280940" target="_blank" rel="noreferrer" aria-label="Wallet">
+        <a href="tel:201093480689" target="_blank" rel="noreferrer" aria-label="Wallet">
             <Fa icon={faViacoin}/>
         </a>
     </div>
