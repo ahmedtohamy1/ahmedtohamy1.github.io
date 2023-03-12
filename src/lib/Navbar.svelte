@@ -20,6 +20,7 @@
         ["/#experience", "Experience"],
         ["/#projects", "Projects"],
         ["/#highlights", "Highlights"],
+        ["/#donate", "Donate"],
     ];
 </script>
 

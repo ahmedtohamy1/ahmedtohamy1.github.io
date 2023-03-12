@@ -3,6 +3,7 @@
 
     import Footer from "$lib/Footer.svelte";
     import About from "$lib/index/About.svelte";
+    import Donate from "$lib/index/Donate.svelte";
     import Highlights from "$lib/index/Highlights.svelte";
     import Experience from "$lib/index/Experience.svelte";
     import Projects from "$lib/index/Projects.svelte";
@@ -13,7 +14,7 @@
     let mount = browser;
 
     const sections = [
-        "about", "experience",
+        "about", "donate", "experience",
         "projects", "highlights"
     ];
 
@@ -38,6 +39,7 @@
             <Experience active={mount && active[1]}/>
             <Projects active={mount && active[2]}/>
             <Highlights active={mount && active[3]}/>
+            <Donate active={mount && active[4]}/>
         </SnapScroll>
     </main>
     <Footer/>
