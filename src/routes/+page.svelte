@@ -14,8 +14,8 @@
     let mount = browser;
 
     const sections = [
-        "about", "donate", "experience",
-        "projects", "highlights"
+        "about", "experience",
+        "projects", "highlights", "donate"
     ];
 
     let innerHeight: number;

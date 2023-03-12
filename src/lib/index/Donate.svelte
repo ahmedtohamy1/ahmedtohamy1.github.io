@@ -19,7 +19,7 @@
         <FlyinText text="Donations" flyin={active} delay={300}/>
     </h1>
     <p>
-	As a development professional, receiving a donation to help me with my work not only motivates me to work better, but also encourages me to put more effort into making things even better. With added support from donations, I can make sure that my efforts are worthwhile and can be seen in the success of the stuff I'm doing. It's invigorating for me to know that others believe in my skills and appreciate what I can achieve when I'm given extra support. From someone donating stationery supplies so that I have all the materials needed for coding and research, to someone investing in my talent and helping out with tuition costs - every donation helps lead towards an exciting future.
+	As Android System and Flutter Developer, receiving a donation to helps with my work not only motivates me to work better, but encourages to put more effort into making things better. With support from donations, I can make sure that my efforts are worthwhile and can be seen in the success of the stuff I'm doing. It's invigorating to know that others believe in my skills and appreciate what I can achieve; donating stationery supplies ensures that I'll have all the materials needed for coding and research, To someone investing in my talent and helping out with tuition costs - every donation helps lead towards an exciting future.
     </p>
     <div class="socials">
         <a href={PAYPAL_URL} target="_blank" rel="noreferrer" aria-label="Paypal">
