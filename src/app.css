@@ -22,10 +22,6 @@ body::-webkit-scrollbar {
 }
 
 @layer base {
-	* {
-		@apply outline-none;
-	}
-
 	body {
 		@apply w-screen h-screen bg-white;
 	}
@@ -57,8 +53,12 @@ body::-webkit-scrollbar {
 		@apply text-gray-800 dark:text-white/90;
 	}
 
+        ul {
+                @apply text-lg text-gray-800 dark:text-white/90;
+        }
+
 	.full {
-		@apply pt-16 sm:pt-14 min-h-screen;
+		@apply pt-16 min-h-screen;
 	}
 
 	input {
@@ -78,18 +78,18 @@ body::-webkit-scrollbar {
 			   checked:after:translate-x-[var(--cisize)] 
 			   bg-black dark:bg-white
 			   dark:checked:bg-orange-500
-			   checked:bg-blue-400;
+			   checked:bg-red-600;
 	}
 
 	a {
-		@apply text-black hover:text-blue-700/60 dark:text-white/90 dark:hover:text-white/60;
+		@apply text-black hover:text-red-900/60 dark:text-white/90 dark:hover:text-white/60;
 	}
 
 	.active {
-		@apply text-blue-700 dark:text-orange-500;
+		@apply text-red-600 dark:text-orange-500;
 	}
 
 	.active:hover {
-		@apply text-blue-700/80 dark:text-orange-600;
+		@apply text-red-600/80 dark:text-orange-600;
 	}
 }
