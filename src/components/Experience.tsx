@@ -16,7 +16,7 @@ const Experience = () => {
         <div className="absolute left-3 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-accent to-transparent" aria-hidden />
         <div className="space-y-8">
           {experiences.map((experience, index) => (
-            <Reveal key={experience.title} delay={index * 0.05}>
+            <Reveal key={`${experience.title}-${experience.company}-${index}`} delay={index * 0.05}>
               <div className="relative pl-10">
                 <div className="absolute left-0 top-6 h-2 w-2 -translate-x-1/2 rounded-full bg-primary" />
                 <Card className="rounded-[28px] border border-border/60 bg-card/90 p-8 shadow-xl shadow-primary/10">

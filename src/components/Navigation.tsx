@@ -43,13 +43,14 @@ const Navigation = () => {
         >
           <a
             href="#"
-            className="text-lg font-semibold tracking-[0.3em] text-primary"
+            className="flex items-center gap-2 text-primary"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
+            aria-label="Scroll to top"
           >
-            {siteMeta.initials}
+            <img src="/headerAT.png" alt="AT monogram" className="h-8 w-auto" />
           </a>
 
           <div className="hidden items-center gap-1 md:flex">
