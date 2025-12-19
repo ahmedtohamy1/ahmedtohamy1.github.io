@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, FileText, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowUpRight, FileText, Github, Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { heroStats, highlightBadges, siteMeta } from "@/data/site";
 
@@ -89,6 +89,18 @@ const Hero = () => {
               asChild
               size="lg"
               variant="outline"
+              className="gap-2 rounded-full border-primary/30 px-6 py-6 text-base text-primary hover:border-primary hover:bg-primary/10"
+            >
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                <Download className="h-5 w-5" />
+                Download Resume
+              </a>
+            </Button>
+            
+            <Button
+              asChild
+              size="lg"
+              variant="ghost"
               className="gap-2 rounded-full border-primary/30 px-6 py-6 text-base text-primary hover:border-primary hover:bg-primary/10"
             >
               <a href="#projects">

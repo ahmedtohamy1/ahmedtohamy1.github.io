@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
-import ThemeToggle from "./ThemeToggle";
 import { navLinks, siteMeta } from "@/data/site";
 import { cn } from "@/lib/utils";
+import { AnimatePresence, motion } from "framer-motion";
+import { Download, Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -66,6 +66,18 @@ const Navigation = () => {
                 <span className="absolute inset-x-4 bottom-1 h-0.5 scale-x-0 rounded-full bg-primary/70 transition-transform duration-300 group-hover:scale-x-100" />
               </Button>
             ))}
+            <Button
+              asChild
+              variant="ghost"
+              size="sm"
+              className="group relative px-4 py-2 text-sm font-medium text-foreground/80 transition-all hover:text-primary"
+            >
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <span>Resume</span>
+                <Download className="h-4 w-4" />
+                <span className="absolute inset-x-4 bottom-1 h-0.5 scale-x-0 rounded-full bg-primary/70 transition-transform duration-300 group-hover:scale-x-100" />
+              </a>
+            </Button>
             <ThemeToggle />
           </div>
 
@@ -97,6 +109,17 @@ const Navigation = () => {
                   {link.label}
                 </Button>
               ))}
+
+              <Button
+                asChild
+                variant="ghost"
+                className="w-full justify-start rounded-2xl px-4 py-3 text-lg font-medium text-foreground/80 hover:bg-primary/10 hover:text-primary"
+              >
+                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  Resume
+                  <Download className="h-4 w-4" />
+                </a>
+              </Button>
             </div>
           </motion.div>
         )}
