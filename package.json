@@ -6,7 +6,7 @@
   "homepage": "https://ahmedtohamy.is-a.dev",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist -t",
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
