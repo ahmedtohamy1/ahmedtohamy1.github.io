@@ -105,83 +105,185 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Plus Jakarta Sans', 'Inter', 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     background-image: linear-gradient(0deg, hsla(0, 0%, 100%, 0.05) 0%, transparent 60%);
     min-height: 100vh;
     scroll-behavior: smooth;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Plus Jakarta Sans', 'Cairo', sans-serif;
+    letter-spacing: -0.02em;
+  }
 }
 
 ::selection {
-  background: hsl(var(--primary) / 0.4);
-  color: hsl(var(--primary-foreground));
+  background: hsl(var(--primary) / 0.3);
+  color: hsl(var(--foreground));
 }
 
 @layer utilities {
   .glass-effect {
-    @apply bg-background/80 backdrop-blur-xl border border-border/50;
+    @apply bg-background/80 backdrop-blur-xl border border-border/50 shadow-2xl;
+  }
+  
+  .glass-card {
+    background: linear-gradient(135deg, hsl(var(--card) / 0.7), hsl(var(--card) / 0.3));
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border) / 0.4);
+    box-shadow: 0 8px 32px 0 hsl(var(--primary) / 0.03);
+    transition: var(--transition-smooth);
+  }
+
+  .glass-card:hover {
+    border-color: hsl(var(--primary) / 0.4);
+    box-shadow: 0 12px 40px 0 hsl(var(--primary) / 0.08);
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-size-200 animate-gradient-x;
   }
   
   .glow-primary {
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+    box-shadow: 0 0 25px hsl(var(--primary) / 0.25);
   }
   
   .glow-accent {
-    box-shadow: 0 0 20px hsl(var(--accent) / 0.3);
+    box-shadow: 0 0 25px hsl(var(--accent) / 0.25);
+  }
+
+  /* Card Hover Mouse Glow Effect */
+  .card-glow {
+    position: relative;
+    overflow: hidden;
+    contain: layout paint;
+  }
+
+  .card-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0px;
+    background: radial-gradient(
+      450px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+      hsl(var(--primary) / 0.12),
+      transparent 70%
+    );
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+  }
+
+  .card-glow:hover::before {
+    opacity: 1;
   }
 
   .animate-on-scroll {
     @apply opacity-0 translate-y-10;
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .animate-on-scroll.visible {
     @apply opacity-100 translate-y-0;
   }
 
-  .custom-cursor {
-    @apply fixed top-0 left-0 z-[9999] pointer-events-none rounded-full;
-    display: none;
-    width: 32px;
-    height: 32px;
+  /* Custom Cursor styles */
+  .custom-cursor-dot {
+    @apply fixed top-0 left-0 z-[9999] pointer-events-none rounded-full bg-primary;
+    width: 8px;
+    height: 8px;
     transform: translate(-50%, -50%);
-    border: 2px solid hsl(var(--primary));
-    background: radial-gradient(circle, hsl(var(--primary) / 0.35) 0%, transparent 60%);
-    box-shadow: 0 0 35px hsl(var(--primary) / 0.4), 0 0 8px hsl(var(--primary) / 0.3) inset;
-    transition:
-      transform 0.16s ease,
-      width 0.16s ease,
-      height 0.16s ease,
-      border 0.16s ease,
-      box-shadow 0.16s ease,
-      background 0.16s ease;
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+    will-change: transform;
   }
 
-  .custom-cursor--active {
-    width: 46px;
-    height: 46px;
-    border-color: hsl(var(--accent));
-    background: radial-gradient(circle, hsl(var(--accent) / 0.4) 0%, transparent 65%);
-    box-shadow: 0 0 40px hsl(var(--accent) / 0.45), 0 0 12px hsl(var(--accent) / 0.3) inset;
+  .custom-cursor-ring {
+    @apply fixed top-0 left-0 z-[9998] pointer-events-none rounded-full border border-primary/45;
+    width: 36px;
+    height: 36px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, hsl(var(--primary) / 0.05) 0%, transparent 70%);
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.1);
+    transition: 
+      width 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+      height 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+      border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+      background 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+  }
+
+  .custom-cursor--active .custom-cursor-dot {
+    @apply bg-accent;
+    width: 6px;
+    height: 6px;
+  }
+
+  .custom-cursor--active .custom-cursor-ring {
+    @apply border-accent;
+    width: 56px;
+    height: 56px;
+    background: radial-gradient(circle, hsl(var(--accent) / 0.12) 0%, transparent 75%);
+    box-shadow: 0 0 30px hsl(var(--accent) / 0.25);
+  }
+
+  /* Custom Scrollbars */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.25);
+    border-radius: 99px;
+    border: 2px solid hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.7);
+  }
+
+  /* Scroll Progress Indicator */
+  .scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3.5px;
+    background: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(var(--primary)) 100%);
+    background-size: 200% auto;
+    animation: gradient-scroll 3s linear infinite;
+    transform-origin: 0%;
+    z-index: 9999;
+  }
+
+  @keyframes gradient-scroll {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes gradient-x {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .bg-size-200 {
+    background-size: 200% auto;
+  }
+
+  .animate-gradient-x {
+    animation: gradient-x 4s ease infinite;
   }
 
   @media (pointer: fine) {
     body {
       cursor: none;
-    }
-
-    .custom-cursor {
-      display: block;
-    }
-  }
-
-  @media (pointer: coarse) {
-    .custom-cursor {
-      display: none !important;
     }
   }
 }

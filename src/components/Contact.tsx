@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import PageSection from "@/components/layout/PageSection";
 import Reveal from "@/components/layout/Reveal";
 import { contactInfo, socialLinks } from "@/data/site";
+import React from "react";
 
 const iconMap = {
   Mail,
@@ -15,6 +16,28 @@ const iconMap = {
 };
 
 const Contact = () => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = e.currentTarget;
+    let rect = card.dataset.rect ? JSON.parse(card.dataset.rect) : null;
+    
+    if (!rect) {
+      const r = card.getBoundingClientRect();
+      rect = { left: r.left, top: r.top };
+      card.dataset.rect = JSON.stringify(rect);
+      
+      const clearCache = () => {
+        delete card.dataset.rect;
+        card.removeEventListener("mouseleave", clearCache);
+      };
+      card.addEventListener("mouseleave", clearCache);
+    }
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    card.style.setProperty("--mouse-x", `${x}px`);
+    card.style.setProperty("--mouse-y", `${y}px`);
+  };
+
   return (
     <PageSection
       id="contact"
@@ -24,26 +47,29 @@ const Contact = () => {
       align="center"
       showHalo={false}
     >
-      <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
-        <Reveal>
-          <Card className="rounded-[28px] border border-border/60 bg-card/95 p-8 shadow-xl shadow-primary/10">
-            <h3 className="text-lg font-semibold text-foreground">Direct line</h3>
+      <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
+        <Reveal className="h-full">
+          <Card 
+            onMouseMove={handleMouseMove}
+            className="card-glow rounded-[28px] border border-border/50 bg-card/30 p-8 shadow-xl shadow-primary/5 backdrop-blur-sm transition-all hover:border-primary/30 h-full"
+          >
+            <h3 className="text-lg font-bold text-foreground tracking-tight border-b border-border/20 pb-3">Direct Line</h3>
             <div className="mt-6 space-y-5">
               {contactInfo.map((info) => {
                 const Icon = iconMap[info.icon as keyof typeof iconMap];
                 return (
-                  <div key={info.label} className="flex items-center gap-4 rounded-2xl border border-primary/10 bg-primary/5 p-4">
-                    <div className="rounded-2xl bg-primary/10 p-3 text-primary">
+                  <div key={info.label} className="flex items-center gap-4 rounded-2xl border border-primary/10 bg-primary/5 p-4 z-10 relative">
+                    <div className="rounded-2xl bg-primary/10 p-3 text-primary shrink-0">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <div>
-                      <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">{info.label}</p>
+                    <div className="min-w-0">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-muted-foreground">{info.label}</p>
                       {info.href ? (
-                        <a href={info.href} className="text-lg font-medium text-foreground hover:text-primary">
+                        <a href={info.href} className="text-base md:text-lg font-semibold text-foreground hover:text-primary transition-colors block truncate">
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-lg font-medium text-foreground">{info.value}</p>
+                        <p className="text-base md:text-lg font-semibold text-foreground truncate">{info.value}</p>
                       )}
                     </div>
                   </div>
@@ -53,31 +79,36 @@ const Contact = () => {
           </Card>
         </Reveal>
 
-        <Reveal delay={0.1}>
-          <Card className="rounded-[28px] border border-primary/30 bg-gradient-to-br from-primary/10 via-card to-card p-8 shadow-xl shadow-primary/15">
-            <h3 className="text-lg font-semibold text-foreground">Social signals</h3>
-            <div className="mt-6 space-y-4">
-              {socialLinks.map((link) => {
-                const Icon = iconMap[link.icon as keyof typeof iconMap];
-                return (
-                  <Button
-                    key={link.label}
-                    asChild
-                    variant="outline"
-                    className="group flex w-full items-center justify-between rounded-2xl border-primary/30 bg-transparent px-4 py-4 text-base text-foreground/80 hover:border-primary hover:bg-primary/5"
-                  >
-                    <a href={link.href} target="_blank" rel="noreferrer">
-                      <span className="flex items-center gap-3">
-                        <Icon className="h-5 w-5 text-primary" />
-                        {link.label}
-                      </span>
-                      <span className="text-sm text-primary">View</span>
-                    </a>
-                  </Button>
-                );
-              })}
+        <Reveal delay={0.1} className="h-full">
+          <Card 
+            onMouseMove={handleMouseMove}
+            className="card-glow rounded-[28px] border border-primary/20 bg-gradient-to-br from-primary/10 via-card/35 to-card/20 p-8 shadow-xl shadow-primary/10 backdrop-blur-sm h-full flex flex-col justify-between"
+          >
+            <div>
+              <h3 className="text-lg font-bold text-foreground tracking-tight border-b border-white/5 pb-3">Social Signals</h3>
+              <div className="mt-6 space-y-4 z-10 relative">
+                {socialLinks.map((link) => {
+                  const Icon = iconMap[link.icon as keyof typeof iconMap];
+                  return (
+                    <Button
+                      key={link.label}
+                      asChild
+                      variant="outline"
+                      className="group flex w-full items-center justify-between rounded-2xl border-primary/25 bg-background/50 px-4 py-4 text-base text-foreground/80 hover:border-primary hover:bg-primary/5 transition-all"
+                    >
+                      <a href={link.href} target="_blank" rel="noreferrer">
+                        <span className="flex items-center gap-3">
+                          <Icon className="h-5 w-5 text-primary" />
+                          {link.label}
+                        </span>
+                        <span className="text-xs font-semibold text-primary group-hover:scale-105 transition-transform">View</span>
+                      </a>
+                    </Button>
+                  );
+                })}
+              </div>
             </div>
-            <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-muted-foreground">
+            <div className="mt-8 rounded-2xl border border-white/5 bg-white/[0.03] p-4 text-xs font-light text-muted-foreground/80 leading-relaxed z-10 relative">
               Available for fractional leadership, mobile architecture reviews, and flagship Flutter builds.
             </div>
           </Card>
@@ -86,13 +117,13 @@ const Contact = () => {
 
       <Reveal delay={0.2}>
         <div className="mt-10 flex flex-col items-center gap-4">
-          <Button asChild size="lg" className="rounded-full px-8 py-6 text-base shadow-lg shadow-primary/20">
+          <Button asChild size="lg" className="rounded-full px-8 py-6 text-base font-bold shadow-lg shadow-primary/15 hover:shadow-primary/25 hover:scale-[1.02] transition-all">
             <a href="mailto:1ahmed.tohamy@gmail.com">
               <Mail className="mr-2 h-5 w-5" />
-              Send a project brief
+              Send a Project Brief
             </a>
           </Button>
-          <p className="text-sm text-muted-foreground">No spam, just thoughtful replies and realistic timelines.</p>
+          <p className="text-sm text-muted-foreground font-light">No spam, just thoughtful replies and realistic timelines.</p>
         </div>
       </Reveal>
     </PageSection>

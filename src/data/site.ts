@@ -520,10 +520,10 @@ export const projects = [
   {
     title: "IGotPlans",
     description:
-      "Event and itinerary planning app for The Art Click with Play Store availability, secure auth, and remote feature flags.",
-    tags: ["Flutter", "Firebase", "Feature Flags", "Play Store"],
+      "Event and itinerary planning app for The Art Click with App Store availability, secure auth, and remote feature flags.",
+    tags: ["Flutter", "Firebase", "Feature Flags", "App Store"],
     github: undefined,
-    demo: "https://play.google.com/store/apps/details?id=com.artclick.igotplan.testing",
+    demo: "https://apps.apple.com/us/app/igotplans-ksa/id6467752440",
     cover: "/placeholder.svg",
   },
 ];
@@ -665,6 +665,6 @@ export const contactInfo: ContactChannel[] = [
 export const socialLinks: SocialLink[] = [
   { icon: "Github", label: "GitHub", href: "https://github.com/ahmedtohamy1" },
   { icon: "Linkedin", label: "LinkedIn", href: "https://linkedin.com/in/1ahmedtohamy" },
-  { icon: "Globe", label: "Portfolio", href: "https://bio.ahmedtohamy.is-a.dev" },
+  { icon: "Globe", label: "Bio", href: "https://bio.ahmedtohamy.is-a.dev" },
 ];
 
