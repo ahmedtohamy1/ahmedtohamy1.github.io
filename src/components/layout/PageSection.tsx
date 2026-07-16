@@ -28,7 +28,7 @@ const PageSection = ({
   const headerAlignment = align === "center" ? "text-center mx-auto" : "";
 
   return (
-    <section id={id} className={cn("relative scroll-mt-32 py-16 md:py-20 px-4 md:px-6", className)}>
+    <section id={id} className={cn("relative scroll-mt-20 pt-24 pb-16 md:pt-28 md:pb-20 px-4 md:px-6", className)}>
       <div className="container mx-auto max-w-6xl">
         <Reveal>
           <div className={cn("space-y-4 mb-10 max-w-3xl", headerAlignment)}>

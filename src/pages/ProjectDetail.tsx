@@ -230,7 +230,7 @@ const ProjectDetail = () => {
               <span className="text-[9px] uppercase tracking-wider text-muted-foreground font-semibold font-mono block">Delivery Role</span>
               <span className="text-base font-bold text-foreground truncate block">Flutter Lead</span>
             </div>
-            <div className="p-3 text-center space-y-1 border-l border-border/20">
+            <div className="p-3 text-center space-y-1 md:border-l border-border/20">
               <span className="text-[9px] uppercase tracking-wider text-muted-foreground font-semibold font-mono block">Core Tech</span>
               <span className="text-base font-bold text-primary truncate block">
                 {project.tags[0] || "Flutter / Dart"}
@@ -256,7 +256,7 @@ const ProjectDetail = () => {
                 {gallery.map((src, index) => (
                   <button
                     key={`${project.slug}-thumb-${src}`}
-                    className="relative rounded-[22px] border border-border/40 overflow-hidden shrink-0 w-80 aspect-[16/10] bg-black/40 hover:border-primary/50 transition-colors snap-center shadow-lg group"
+                    className="relative rounded-[22px] border border-border/40 overflow-hidden shrink-0 w-[280px] xs:w-80 aspect-[16/10] bg-black/40 hover:border-primary/50 transition-colors snap-center shadow-lg group"
                     onClick={() => {
                       setActiveIndex(index);
                       setIsViewerOpen(true);
@@ -268,12 +268,12 @@ const ProjectDetail = () => {
                     </div>
                     
                     {/* Brand-Specific Gradient Canvas */}
-                    <div className={`relative w-full h-full p-4 flex items-center justify-center bg-gradient-to-br ${getProjectGradient(project.title)}`}>
+                    <div className={`relative w-full h-full pt-4 px-4 pb-0 flex items-end justify-center bg-gradient-to-br ${getProjectGradient(project.title)}`}>
                       {/* Floating Screenshot (respecting embedded mockup details) */}
                       <img
                         src={src}
                         alt=""
-                        className="max-h-full max-w-[90%] object-contain drop-shadow-[0_12px_28px_rgba(0,0,0,0.6)] group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+                        className="max-h-full max-w-[90%] object-contain object-bottom drop-shadow-[0_12px_28px_rgba(0,0,0,0.6)] group-hover:scale-[1.02] transition-transform duration-500 ease-out"
                         loading="lazy"
                       />
                     </div>
@@ -438,7 +438,7 @@ const ProjectDetail = () => {
           <div className="relative flex flex-1 items-center justify-center p-6">
             {gallery.length > 1 && (
               <button
-                className="absolute left-6 top-1/2 -translate-y-1/2 rounded-full border border-white/15 bg-black/60 p-3.5 text-white/80 transition hover:bg-black/90 hover:scale-105"
+                className="absolute left-2 xs:left-4 md:left-6 top-1/2 -translate-y-1/2 rounded-full border border-white/15 bg-black/60 p-2 xs:p-3 md:p-3.5 text-white/80 transition hover:bg-black/90 hover:scale-105"
                 onClick={() => shiftImage(-1)}
                 aria-label="Previous screenshot"
               >
@@ -454,7 +454,7 @@ const ProjectDetail = () => {
             
             {gallery.length > 1 && (
               <button
-                className="absolute right-6 top-1/2 -translate-y-1/2 rounded-full border border-white/15 bg-black/60 p-3.5 text-white/80 transition hover:bg-black/90 hover:scale-105"
+                className="absolute right-2 xs:right-4 md:right-6 top-1/2 -translate-y-1/2 rounded-full border border-white/15 bg-black/60 p-2 xs:p-3 md:p-3.5 text-white/80 transition hover:bg-black/90 hover:scale-105"
                 onClick={() => shiftImage(1)}
                 aria-label="Next screenshot"
               >

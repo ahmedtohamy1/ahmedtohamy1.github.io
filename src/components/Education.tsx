@@ -40,7 +40,7 @@ const Education = () => {
           <Reveal key={entry.institution} delay={index * 0.05} className="h-full">
             <Card 
               onMouseMove={handleMouseMove}
-              className="card-glow rounded-[26px] border border-border/50 bg-card/30 p-6 shadow-lg shadow-primary/5 backdrop-blur-sm transition-all hover:border-primary/30 flex flex-col justify-between h-full"
+              className="card-glow rounded-[26px] border border-border/50 bg-card/30 p-5 sm:p-6 shadow-lg shadow-primary/5 backdrop-blur-sm transition-all hover:border-primary/30 flex flex-col justify-between h-full"
             >
               <div className="space-y-1.5 z-10 relative">
                 <p className="text-xs font-semibold uppercase tracking-[0.35em] text-primary/80">{entry.period}</p>

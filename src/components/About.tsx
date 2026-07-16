@@ -38,7 +38,7 @@ const About = () => {
         <Reveal className="h-full">
           <Card 
             onMouseMove={handleMouseMove}
-            className="card-glow relative overflow-hidden rounded-[28px] border border-primary/20 bg-card/40 p-8 md:p-10 backdrop-blur-xl h-full flex flex-col justify-between"
+            className="card-glow relative overflow-hidden rounded-[28px] border border-primary/20 bg-card/40 p-5 sm:p-8 md:p-10 backdrop-blur-xl h-full flex flex-col justify-between"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" aria-hidden />
             <div className="relative space-y-6">

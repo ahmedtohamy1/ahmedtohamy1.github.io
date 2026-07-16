@@ -109,31 +109,24 @@ const Projects = () => {
       description="A rotating set of engagements that highlight different sides of my craft: modular architecture, IoT integrations, payment security, and leadership of small but mighty product squads."
     >
       
-      {/* Spacious Segmented Filter Tabs */}
-      <div className="flex justify-center mb-16">
-        <div className="inline-flex items-center gap-2.5 rounded-full border border-primary/20 bg-card/45 p-2 backdrop-blur-lg shadow-xl shadow-primary/5">
-          {categories.map((cat) => {
-            const isActive = activeCategory === cat;
-            return (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`relative rounded-full px-6 py-3.5 text-xs font-bold uppercase tracking-widest transition-all ${
-                  isActive ? "text-primary-foreground z-10" : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {isActive && (
-                  <motion.span
-                    layoutId="activeCategoryPill"
-                    className="absolute inset-0 rounded-full bg-primary"
-                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  />
-                )}
-                <span className="relative z-10">{cat}</span>
-              </button>
-            );
-          })}
-        </div>
+      {/* Premium Horizontal Filter Row */}
+      <div className="flex w-full items-center justify-start md:justify-center gap-2.5 overflow-x-auto pb-4 mb-12 scrollbar-none px-4 snap-x select-none">
+        {categories.map((cat) => {
+          const isActive = activeCategory === cat;
+          return (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`snap-center rounded-full px-5 py-3 text-[10px] sm:text-xs font-bold uppercase tracking-widest transition-all shrink-0 border ${
+                isActive
+                  ? "border-primary bg-primary text-primary-foreground shadow-lg shadow-primary/10"
+                  : "border-border/40 bg-card/25 text-muted-foreground hover:text-foreground hover:bg-card/45"
+              }`}
+            >
+              {cat}
+            </button>
+          );
+        })}
       </div>
 
       {/* Projects Grid Showcase */}
@@ -185,12 +178,12 @@ const Projects = () => {
                     </div>
 
                     {/* Brand-Specific Gradient Canvas */}
-                    <div className={`relative w-full h-full p-6 md:p-8 flex items-center justify-center min-h-[280px] bg-gradient-to-br ${getProjectGradient(project.title)}`}>
+                    <div className={`relative w-full h-full pt-6 px-6 md:pt-8 md:px-8 pb-0 flex items-end justify-center min-h-[280px] bg-gradient-to-br ${getProjectGradient(project.title)}`}>
                       {/* Floating Screenshot (respecting embedded mockup details) */}
                       <img
                         src={activeImage}
                         alt={`${project.title} screenshot`}
-                        className="max-h-[220px] md:max-h-[240px] lg:max-h-full max-w-[90%] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.65)] transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                        className="max-h-[200px] md:max-h-[225px] lg:max-h-full max-w-[90%] object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.65)] transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                         loading="lazy"
                       />
                     </div>
@@ -237,7 +230,7 @@ const Projects = () => {
                   </div>
 
                   {/* Card Content details */}
-                  <div className="flex flex-col justify-between gap-5 p-7 md:p-8 relative z-10">
+                  <div className="flex flex-col justify-between gap-5 p-5 sm:p-7 md:p-8 relative z-10">
                     <div className="space-y-4">
                       {isFeatured && (
                         <div className="flex items-center gap-2">

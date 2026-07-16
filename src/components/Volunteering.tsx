@@ -40,7 +40,7 @@ const Volunteering = () => {
           <Reveal key={entry.organization} delay={index * 0.05}>
             <Card 
               onMouseMove={handleMouseMove}
-              className="card-glow rounded-[26px] border border-border/50 bg-card/30 p-6 md:p-8 shadow-lg shadow-primary/5 backdrop-blur-sm transition-all hover:border-primary/30"
+              className="card-glow rounded-[26px] border border-border/50 bg-card/30 p-5 sm:p-6 md:p-8 shadow-lg shadow-primary/5 backdrop-blur-sm transition-all hover:border-primary/30"
             >
               <div className="flex flex-wrap items-center justify-between gap-4 z-10 relative">
                 <div>

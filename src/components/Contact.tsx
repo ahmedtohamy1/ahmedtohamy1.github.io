@@ -51,15 +51,15 @@ const Contact = () => {
         <Reveal className="h-full">
           <Card 
             onMouseMove={handleMouseMove}
-            className="card-glow rounded-[28px] border border-border/50 bg-card/30 p-8 shadow-xl shadow-primary/5 backdrop-blur-sm transition-all hover:border-primary/30 h-full"
+            className="card-glow rounded-[28px] border border-border/50 bg-card/30 p-5 sm:p-8 shadow-xl shadow-primary/5 backdrop-blur-sm transition-all hover:border-primary/30 h-full"
           >
             <h3 className="text-lg font-bold text-foreground tracking-tight border-b border-border/20 pb-3">Direct Line</h3>
             <div className="mt-6 space-y-5">
               {contactInfo.map((info) => {
                 const Icon = iconMap[info.icon as keyof typeof iconMap];
                 return (
-                  <div key={info.label} className="flex items-center gap-4 rounded-2xl border border-primary/10 bg-primary/5 p-4 z-10 relative">
-                    <div className="rounded-2xl bg-primary/10 p-3 text-primary shrink-0">
+                  <div key={info.label} className="flex items-center gap-3 sm:gap-4 rounded-2xl border border-primary/10 bg-primary/5 p-3 sm:p-4 z-10 relative">
+                    <div className="rounded-2xl bg-primary/10 p-2.5 sm:p-3 text-primary shrink-0">
                       <Icon className="h-5 w-5" />
                     </div>
                     <div className="min-w-0">
@@ -82,7 +82,7 @@ const Contact = () => {
         <Reveal delay={0.1} className="h-full">
           <Card 
             onMouseMove={handleMouseMove}
-            className="card-glow rounded-[28px] border border-primary/20 bg-gradient-to-br from-primary/10 via-card/35 to-card/20 p-8 shadow-xl shadow-primary/10 backdrop-blur-sm h-full flex flex-col justify-between"
+            className="card-glow rounded-[28px] border border-primary/20 bg-gradient-to-br from-primary/10 via-card/35 to-card/20 p-5 sm:p-8 shadow-xl shadow-primary/10 backdrop-blur-sm h-full flex flex-col justify-between"
           >
             <div>
               <h3 className="text-lg font-bold text-foreground tracking-tight border-b border-white/5 pb-3">Social Signals</h3>
@@ -94,7 +94,7 @@ const Contact = () => {
                       key={link.label}
                       asChild
                       variant="outline"
-                      className="group flex w-full items-center justify-between rounded-2xl border-primary/25 bg-background/50 px-4 py-4 text-base text-foreground/80 hover:border-primary hover:bg-primary/5 transition-all"
+                      className="group flex w-full items-center justify-between rounded-2xl border-primary/25 bg-background/50 px-3 sm:px-4 py-3 sm:py-4 text-base text-foreground/80 hover:border-primary hover:bg-primary/5 transition-all"
                     >
                       <a href={link.href} target="_blank" rel="noreferrer">
                         <span className="flex items-center gap-3">

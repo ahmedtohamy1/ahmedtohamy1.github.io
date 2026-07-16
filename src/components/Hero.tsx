@@ -143,11 +143,11 @@ const Hero = () => {
           </div>
 
           {/* Quick stats pills */}
-          <div className="grid grid-cols-3 gap-4 border border-border/50 bg-card/40 p-4 rounded-3xl backdrop-blur-sm">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 border border-border/50 bg-card/40 p-3 sm:p-4 rounded-[22px] sm:rounded-3xl backdrop-blur-sm">
             {heroStats.map((stat) => (
               <div key={stat.label} className="text-center space-y-1">
-                <p className="text-2xl md:text-3xl font-extrabold text-primary">{stat.value}</p>
-                <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">{stat.label}</p>
+                <p className="text-xl sm:text-2xl md:text-3xl font-extrabold text-primary">{stat.value}</p>
+                <p className="text-[8px] sm:text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">{stat.label}</p>
               </div>
             ))}
           </div>

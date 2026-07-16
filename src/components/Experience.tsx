@@ -46,7 +46,7 @@ const Experience = () => {
                 
                 <Card 
                   onMouseMove={handleMouseMove}
-                  className="card-glow rounded-[28px] border border-border/50 bg-card/30 p-8 shadow-xl shadow-primary/5 backdrop-blur-sm transition-all hover:border-primary/30"
+                  className="card-glow rounded-[28px] border border-border/50 bg-card/30 p-5 sm:p-8 shadow-xl shadow-primary/5 backdrop-blur-sm transition-all hover:border-primary/30"
                 >
                   <div className="flex flex-wrap items-start gap-4">
                     <div className="rounded-2xl border border-primary/20 bg-primary/10 p-3 text-primary">
